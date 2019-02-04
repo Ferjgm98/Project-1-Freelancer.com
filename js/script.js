@@ -77,28 +77,29 @@ if(document.querySelectorAll('.validate')) {
     });
 }
 
-
-document.querySelector('.form-tab').addEventListener('submit', e => {
-
-    e.preventDefault();
-    let count = 0;
-    const inputValid = Array.from(document.querySelectorAll('.validate'));
-
-    inputValid.forEach(input => {
-        if(validateFields(input)) {
-            count++
+if(document.querySelector('.form-tab')) {
+    document.querySelector('.form-tab').addEventListener('submit', e => {
+    
+        e.preventDefault();
+        let count = 0;
+        const inputValid = Array.from(document.querySelectorAll('.validate'));
+    
+        inputValid.forEach(input => {
+            if(validateFields(input)) {
+                count++
+            }
+        });
+    
+        if(count === inputValid.length) {
+            console.log('good');
+            return true;
+        } else {
+            console.log('bad');
+            return false;
         }
+    
     });
-
-    if(count === inputValid.length) {
-        console.log('good');
-        return true;
-    } else {
-        console.log('bad');
-        return false;
-    }
-
-})
+}
 
 
 /*=====  End of Form validations  ======*/
