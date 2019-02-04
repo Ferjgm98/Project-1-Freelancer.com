@@ -626,9 +626,7 @@ p {
     background: #dcdddd;
     color: #8b8b8b;
 }
-.col-themes .col-themes-inner .row .btn:hover:disabled {
-    color: #8b8b8b;
-}
+
 
 .col-themes-inner h3{
     color: #7f7f7f;
@@ -737,14 +735,11 @@ p {
     width: 100%;
 }
 
-.row-btns .btn-tab-form:hover {
-    color: #1a8ec3 
-}
-
-.row-btns .btn-tab-form[type="submit"]:hover {
+.row-btns .btn-tab-form:hover, .col-themes .col-themes-inner .row .btn:hover {
     background: #1a8ec3;
     color: #fff;
 }
+
 
 
 
